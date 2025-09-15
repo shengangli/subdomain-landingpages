@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOW - Premium Skin Care Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <h1>GLOW</h1>
+                    <span class="tagline">Skin Care</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#ingredients">Ingredients</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="icon-btn search-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="icon-btn cart-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 2 5 9l14 0 -4-7"></path>
+                            <path d="M5 9v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9"></path>
+                        </svg>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <button class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <div class="hero-badge">
+                        <span>✨ New Collection 2024</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Unlock Your Skin's<br>
+                        <span class="gradient-text">Natural Radiance</span>
+                    </h1>
+                    <p class="hero-description">
+                        Experience the transformative power of nature with our scientifically-formulated
+                        skincare collection. Pure ingredients, visible results.
+                    </p>
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Clinically Tested</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Cruelty Free</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>100% Vegan</span>
+                        </div>
+                    </div>
+                    <div class="hero-cta">
+                        <button class="btn-hero-primary">
+                            <span>Explore Collection</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </button>
+                        <button class="btn-hero-secondary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            <span>Watch Video</span>
+                        </button>
+                    </div>
+                    <div class="hero-trust">
+                        <div class="trust-avatars">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop" alt="Customer">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop" alt="Customer">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop" alt="Customer">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=40&h=40&fit=crop" alt="Customer">
+                            <span class="trust-count">+12K</span>
+                        </div>
+                        <div class="trust-text">
+                            <div class="trust-rating">
+                                <span>⭐⭐⭐⭐⭐</span>
+                                <strong>4.9/5</strong>
+                            </div>
+                            <p>Trusted by thousands worldwide</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-visual">
+                        <div class="hero-bg-shape"></div>
+                        <div class="hero-main-image">
+                            <img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600&h=700&fit=crop" alt="Premium skincare products">
+                        </div>
+                        <div class="hero-product-card">
+                            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=60&h=60&fit=crop" alt="Vitamin C Serum">
+                            <div class="product-info">
+                                <span class="product-label">Bestseller</span>
+                                <h4>Vitamin C Serum</h4>
+                                <div class="product-rating">⭐⭐⭐⭐⭐ (2.3k)</div>
+                            </div>
+                        </div>
+                        <div class="hero-discount-badge">
+                            <span class="discount-text">SAVE</span>
+                            <span class="discount-amount">25%</span>
+                        </div>
+                        <div class="floating-element element-1">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=80&h=80&fit=crop" alt="Aloe">
+                        </div>
+                        <div class="floating-element element-2">
+                            <img src="https://images.unsplash.com/photo-1600298881974-6be191ceeda1?w=80&h=80&fit=crop" alt="Rose">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Products</span>
+                <h2 class="section-title">Bestselling Collection</h2>
+                <p class="section-description">Explore our most loved skincare essentials</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&h=400&fit=crop" alt="Vitamin C Serum">
+                        <span class="product-badge">New</span>
+                        <div class="product-overlay">
+                            <button class="btn-icon">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Serum</span>
+                        <h3 class="product-name">Vitamin C Brightening Serum</h3>
+                        <p class="product-description">Powerful antioxidant formula for radiant skin</p>
+                        <div class="product-footer">
+                            <span class="product-price">$48.00</span>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1556228852-80b6e5eeff06?w=400&h=400&fit=crop" alt="Hyaluronic Moisturizer">
+                        <span class="product-badge bestseller">Bestseller</span>
+                        <div class="product-overlay">
+                            <button class="btn-icon">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Moisturizer</span>
+                        <h3 class="product-name">Hyaluronic Acid Moisturizer</h3>
+                        <p class="product-description">Deep hydration for all skin types</p>
+                        <div class="product-footer">
+                            <span class="product-price">$56.00</span>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=400&h=400&fit=crop" alt="Retinol Cream">
+                        <div class="product-overlay">
+                            <button class="btn-icon">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Night Care</span>
+                        <h3 class="product-name">Retinol Night Cream</h3>
+                        <p class="product-description">Anti-aging formula for smoother skin</p>
+                        <div class="product-footer">
+                            <span class="product-price">$72.00</span>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1556229010-aa3f7ff66b24?w=400&h=400&fit=crop" alt="Cleansing Oil">
+                        <div class="product-overlay">
+                            <button class="btn-icon">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Cleanser</span>
+                        <h3 class="product-name">Gentle Cleansing Oil</h3>
+                        <p class="product-description">Remove makeup and impurities gently</p>
+                        <div class="product-footer">
+                            <span class="product-price">$32.00</span>
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products-cta">
+                <button class="btn btn-outline">View All Products</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ingredients Section -->
+    <section class="ingredients" id="ingredients">
+        <div class="container">
+            <div class="ingredients-content">
+                <div class="ingredients-text">
+                    <span class="section-label">Pure & Natural</span>
+                    <h2 class="section-title">Key Ingredients</h2>
+                    <p class="section-description">
+                        We carefully select each ingredient for its proven benefits and gentle effectiveness
+                    </p>
+                    <div class="ingredients-list">
+                        <div class="ingredient-item">
+                            <div class="ingredient-icon">
+                                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=100&h=100&fit=crop" alt="Aloe Vera">
+                            </div>
+                            <div class="ingredient-info">
+                                <h4>Aloe Vera</h4>
+                                <p>Soothes and hydrates sensitive skin</p>
+                            </div>
+                        </div>
+                        <div class="ingredient-item">
+                            <div class="ingredient-icon">
+                                <img src="https://images.unsplash.com/photo-1600298881974-6be191ceeda1?w=100&h=100&fit=crop" alt="Rose Extract">
+                            </div>
+                            <div class="ingredient-info">
+                                <h4>Rose Extract</h4>
+                                <p>Anti-inflammatory and antioxidant properties</p>
+                            </div>
+                        </div>
+                        <div class="ingredient-item">
+                            <div class="ingredient-icon">
+                                <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=100&h=100&fit=crop" alt="Green Tea">
+                            </div>
+                            <div class="ingredient-info">
+                                <h4>Green Tea</h4>
+                                <p>Protects against environmental damage</p>
+                            </div>
+                        </div>
+                        <div class="ingredient-item">
+                            <div class="ingredient-icon">
+                                <img src="https://images.unsplash.com/photo-1609099910696-94f8b2e11731?w=100&h=100&fit=crop" alt="Vitamin E">
+                            </div>
+                            <div class="ingredient-info">
+                                <h4>Vitamin E</h4>
+                                <p>Nourishes and repairs damaged skin</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ingredients-image">
+                    <img src="https://images.unsplash.com/photo-1556228453-efd2c1d07462?w=600&h=600&fit=crop" alt="Natural ingredients">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Reviews</span>
+                <h2 class="section-title">What Our Customers Say</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <span>★★★★★</span>
+                    </div>
+                    <p class="testimonial-text">
+                        "The Vitamin C serum has completely transformed my skin. I've noticed a significant improvement in brightness and texture within just 2 weeks!"
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop" alt="Sarah">
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <span>★★★★★</span>
+                    </div>
+                    <p class="testimonial-text">
+                        "I love how gentle yet effective these products are. My sensitive skin has never felt better. Highly recommend the cleansing oil!"
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50&h=50&fit=crop" alt="Emily">
+                        <div>
+                            <h4>Emily Chen</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <span>★★★★★</span>
+                    </div>
+                    <p class="testimonial-text">
+                        "The hyaluronic moisturizer is a game-changer. My skin stays hydrated all day without feeling greasy. Perfect for my combination skin!"
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop" alt="Michael">
+                        <div>
+                            <h4>Michael Davis</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Get 15% Off Your First Order</h2>
+                <p>Subscribe to our newsletter for exclusive offers and skincare tips</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>GLOW</h3>
+                    <p>Premium skincare products crafted with natural ingredients for healthy, radiant skin.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Instagram">i</a>
+                        <a href="#" aria-label="Twitter">t</a>
+                        <a href="#" aria-label="Pinterest">p</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#products">Shop</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#ingredients">Ingredients</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>Email: hello@glowskincare.com</li>
+                        <li>Phone: +1 (555) 123-4567</li>
+                        <li>Mon-Fri: 9AM - 6PM EST</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GLOW Skin Care. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

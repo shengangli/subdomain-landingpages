@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雾影极简防水背包</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: transparent;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            color: black;
+            padding: 8px 20px;
+            border-radius: 5px;
+            font-weight: 900;
+            font-size: 18px;
+        }
+        
+        .logo-img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #000;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        .cta-button {
+            background-color: #000;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .read-more {
+            background-color: #e0e0e0;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-bottom: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        h1 {
+            font-size: 48px;
+            text-align: center;
+            line-height: 1.3;
+        }
+        
+        .highlight {
+            background-color: #FFD700;
+            padding: 0 10px;
+        }
+        
+        /* Product Section */
+        .product-showcase {
+            position: relative;
+            width: 800px;
+            height: 500px;
+            margin: 0 auto 0px;
+        }
+        
+        .backpack-container {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 500px;
+        }
+        
+        .backpack-image {
+            width: 100%;
+            height: 100%;
+            background-image: url('image 55.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .feature-card {
+            position: absolute;
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+        
+        .growth-chart {
+            left: 20px;
+            top: 80px;
+            width: 250px;
+        }
+        
+        .growth-chart h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #666;
+        }
+        
+        .chart {
+            display: flex;
+            align-items: flex-end;
+            gap: 5px;
+            height: 60px;
+            margin-top: 10px;
+        }
+        
+        .chart-bar {
+            flex: 1;
+            background-color: #f0f0f0;
+            border-radius: 3px;
+            position: relative;
+        }
+        
+        .chart-bar.active {
+            background-color: #333;
+        }
+        
+        .chart-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .simple-tag, .light-tag {
+            position: absolute;
+            background-color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+        
+        .simple-tag {
+            right: 100px;
+            top: 120px;
+        }
+        
+        .light-tag {
+            left: 150px;
+            bottom: 150px;
+        }
+        
+        .features-list {
+            position: absolute;
+            right: 20px;
+            bottom: 80px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 280px;
+            z-index: 10;
+        }
+        
+        .features-list p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #333;
+            line-height: 1.5;
+        }
+        
+        .features-list p:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Stats Section */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin-top: 0px;
+            padding-bottom: 1%;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 18px;
+            color: #666;
+        }
+        
+        .divider {
+            width: 2px;
+            background-color: #ddd;
+            align-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <div class="logo-img"></div>
+            你的背包
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">背包</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">商品制作</a></li>
+        </ul>
+        <a href="#" class="cta-button">定制你的背包</a>
+    </nav>
+    
+    <div class="hero">
+        <button class="read-more">Read More</button>
+        
+        <h1>
+            雾影极简防水背包<br>
+            背上它 <span class="highlight">就能出发</span>
+        </h1>
+        
+        <div class="product-showcase">
+            <div class="backpack-container">
+                <div class="backpack-image"></div>
+            </div>
+            
+            <div class="growth-chart feature-card">
+                <h3>魅力度每天增强</h3>
+                <p style="color: #999; font-size: 14px;">舒适度+魅力UP</p>
+                <div class="chart">
+                    <div class="chart-bar" style="height: 30%"></div>
+                    <div class="chart-bar" style="height: 45%"></div>
+                    <div class="chart-bar" style="height: 60%"></div>
+                    <div class="chart-bar active" style="height: 80%"></div>
+                </div>
+                <div class="chart-labels">
+                    <span>Day1</span>
+                    <span>Day2</span>
+                    <span>Day3</span>
+                    <span>Day5+</span>
+                </div>
+            </div>
+            
+            <div class="simple-tag">简</div>
+            <div class="light-tag">轻</div>
+            
+            <div class="features-list feature-card">
+                <p>轻松容纳 16 英寸笔电</p>
+                <p>雾影背包用一体化设计</p>
+                <p>城市上班族 + 周末玩家</p>
+            </div>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-value">30%减重</div>
+            </div>
+            <div class="divider"></div>
+            <div class="stat-item">
+                <div class="stat-value">雾影制作</div>
+            </div>
+            <div class="divider"></div>
+            <div class="stat-item">
+                <div class="stat-value">25L容量</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

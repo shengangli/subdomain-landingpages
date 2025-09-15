@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Daily - Your Source for Breaking News</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <span class="logo-text">News<span class="accent">Daily</span></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#" class="nav-link active">Home</a></li>
+                    <li><a href="#" class="nav-link">Politics</a></li>
+                    <li><a href="#" class="nav-link">Business</a></li>
+                    <li><a href="#" class="nav-link">Technology</a></li>
+                    <li><a href="#" class="nav-link">Sports</a></li>
+                    <li><a href="#" class="nav-link">Entertainment</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="search-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="subscribe-btn">Subscribe</button>
+                </div>
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-main">
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=500&fit=crop" alt="Main news story">
+                        <div class="category-badge">Breaking News</div>
+                    </div>
+                    <div class="hero-content">
+                        <h1 class="hero-title">Global Climate Summit Reaches Historic Agreement on Carbon Emissions</h1>
+                        <p class="hero-excerpt">World leaders unite in unprecedented commitment to reduce carbon emissions by 50% by 2030, marking a pivotal moment in the fight against climate change.</p>
+                        <div class="article-meta">
+                            <span class="author">By Sarah Johnson</span>
+                            <span class="date">2 hours ago</span>
+                            <span class="read-time">5 min read</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-sidebar">
+                    <h3 class="sidebar-title">Trending Now</h3>
+                    <div class="trending-list">
+                        <article class="trending-item">
+                            <span class="trending-number">01</span>
+                            <div class="trending-content">
+                                <h4>Tech Giants Announce Joint AI Safety Initiative</h4>
+                                <span class="trending-time">1 hour ago</span>
+                            </div>
+                        </article>
+                        <article class="trending-item">
+                            <span class="trending-number">02</span>
+                            <div class="trending-content">
+                                <h4>Stock Markets Hit Record Highs Amid Economic Recovery</h4>
+                                <span class="trending-time">3 hours ago</span>
+                            </div>
+                        </article>
+                        <article class="trending-item">
+                            <span class="trending-number">03</span>
+                            <div class="trending-content">
+                                <h4>Scientists Discover Potential Cure for Rare Disease</h4>
+                                <span class="trending-time">4 hours ago</span>
+                            </div>
+                        </article>
+                        <article class="trending-item">
+                            <span class="trending-number">04</span>
+                            <div class="trending-content">
+                                <h4>Olympic Games Committee Announces New Host Cities</h4>
+                                <span class="trending-time">5 hours ago</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Stories -->
+    <section class="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Stories</h2>
+                <a href="#" class="view-all">View All →</a>
+            </div>
+            <div class="featured-grid">
+                <article class="featured-card">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&h=250&fit=crop" alt="News story">
+                        <span class="category-tag">Politics</span>
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="featured-title">New Infrastructure Bill Passes Senate with Bipartisan Support</h3>
+                        <p class="featured-excerpt">The comprehensive infrastructure package promises to modernize transportation systems and create millions of jobs.</p>
+                        <div class="featured-meta">
+                            <span class="author">Michael Chen</span>
+                            <span class="date">6 hours ago</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="featured-card">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop" alt="News story">
+                        <span class="category-tag">Technology</span>
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="featured-title">Quantum Computing Breakthrough Could Revolutionize Data Processing</h3>
+                        <p class="featured-excerpt">Researchers achieve milestone in quantum computing stability, bringing practical applications closer to reality.</p>
+                        <div class="featured-meta">
+                            <span class="author">Emily Watson</span>
+                            <span class="date">8 hours ago</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="featured-card">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=400&h=250&fit=crop" alt="News story">
+                        <span class="category-tag">Business</span>
+                    </div>
+                    <div class="featured-content">
+                        <h3 class="featured-title">Global Supply Chain Crisis Shows Signs of Recovery</h3>
+                        <p class="featured-excerpt">Shipping costs decrease for first time in 18 months as port congestion eases worldwide.</p>
+                        <div class="featured-meta">
+                            <span class="author">David Martinez</span>
+                            <span class="date">10 hours ago</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News Grid -->
+    <section class="latest-news">
+        <div class="container">
+            <div class="latest-wrapper">
+                <div class="latest-main">
+                    <h2 class="section-title">Latest News</h2>
+                    <div class="news-list">
+                        <article class="news-item">
+                            <div class="news-image">
+                                <img src="https://images.unsplash.com/photo-1569163139394-de4798aa62b6?w=200&h=150&fit=crop" alt="News">
+                            </div>
+                            <div class="news-content">
+                                <span class="news-category">Sports</span>
+                                <h3 class="news-title">Championship Finals Draw Record Television Audience</h3>
+                                <p class="news-excerpt">The thrilling seven-game series captivated viewers worldwide, setting new viewership records.</p>
+                                <div class="news-meta">
+                                    <span>James Wilson</span>
+                                    <span>•</span>
+                                    <span>12 hours ago</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="news-item">
+                            <div class="news-image">
+                                <img src="https://images.unsplash.com/photo-1532153259564-a5f24f261f51?w=200&h=150&fit=crop" alt="News">
+                            </div>
+                            <div class="news-content">
+                                <span class="news-category">Health</span>
+                                <h3 class="news-title">New Study Links Exercise to Improved Mental Health Outcomes</h3>
+                                <p class="news-excerpt">Comprehensive research shows significant benefits of regular physical activity on psychological well-being.</p>
+                                <div class="news-meta">
+                                    <span>Dr. Lisa Anderson</span>
+                                    <span>•</span>
+                                    <span>14 hours ago</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="news-item">
+                            <div class="news-image">
+                                <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?w=200&h=150&fit=crop" alt="News">
+                            </div>
+                            <div class="news-content">
+                                <span class="news-category">Entertainment</span>
+                                <h3 class="news-title">Film Festival Announces Lineup for 50th Anniversary Edition</h3>
+                                <p class="news-excerpt">Prestigious festival to showcase over 200 films from 50 countries in its landmark celebration.</p>
+                                <div class="news-meta">
+                                    <span>Rachel Green</span>
+                                    <span>•</span>
+                                    <span>16 hours ago</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="news-item">
+                            <div class="news-image">
+                                <img src="https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?w=200&h=150&fit=crop" alt="News">
+                            </div>
+                            <div class="news-content">
+                                <span class="news-category">Science</span>
+                                <h3 class="news-title">Mars Rover Discovers Evidence of Ancient River System</h3>
+                                <p class="news-excerpt">Latest findings suggest Mars had extensive water networks billions of years ago.</p>
+                                <div class="news-meta">
+                                    <span>Prof. Mark Thompson</span>
+                                    <span>•</span>
+                                    <span>18 hours ago</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <button class="load-more">Load More Articles</button>
+                </div>
+                <aside class="latest-sidebar">
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">Newsletter</h3>
+                        <div class="newsletter">
+                            <p>Get the latest news delivered to your inbox daily</p>
+                            <form class="newsletter-form">
+                                <input type="email" placeholder="Enter your email" class="newsletter-input">
+                                <button type="submit" class="newsletter-btn">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">Categories</h3>
+                        <div class="category-list">
+                            <a href="#" class="category-link">
+                                <span>Politics</span>
+                                <span class="category-count">124</span>
+                            </a>
+                            <a href="#" class="category-link">
+                                <span>Business</span>
+                                <span class="category-count">98</span>
+                            </a>
+                            <a href="#" class="category-link">
+                                <span>Technology</span>
+                                <span class="category-count">156</span>
+                            </a>
+                            <a href="#" class="category-link">
+                                <span>Sports</span>
+                                <span class="category-count">87</span>
+                            </a>
+                            <a href="#" class="category-link">
+                                <span>Entertainment</span>
+                                <span class="category-count">112</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">Twitter</a>
+                            <a href="#" class="social-link">Facebook</a>
+                            <a href="#" class="social-link">Instagram</a>
+                            <a href="#" class="social-link">LinkedIn</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">News<span class="accent">Daily</span></span>
+                    <p class="footer-desc">Your trusted source for breaking news and in-depth analysis from around the world.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#">About Us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <a href="#">Archives</a>
+                        <a href="#">RSS Feed</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NewsDaily. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
