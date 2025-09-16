@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meridian Capital - Institutional Asset Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;500&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">MERIDIAN</div>
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-text">MERIDIAN</div>
+                <div class="logo-dot"></div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#strategy">Strategy</a></li>
+                <li><a href="#performance">Performance</a></li>
+                <li><a href="#approach">Approach</a></li>
+                <li><a href="#insights">Insights</a></li>
+            </ul>
+            <div class="nav-indicator"></div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-text-wrapper">
+                <h1 class="hero-title">
+                    <span class="title-line">The Future of</span>
+                    <span class="title-line gradient-text">Wealth Creation</span>
+                    <span class="title-line">Starts Here</span>
+                </h1>
+                <p class="hero-subtitle">Where artificial intelligence meets institutional capital • Generating alpha through quantum-powered algorithms</p>
+                <div class="hero-cta">
+                    <button class="cta-btn pulse-btn">
+                        <span>Unlock Alpha Generation</span>
+                        <div class="btn-pulse"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-dot"></div>
+        </div>
+    </header>
+
+    <section id="strategy" class="section strategy">
+        <div class="container">
+            <div class="section-content">
+                <div class="section-header">
+                    <div class="section-badge">STRATEGY</div>
+                    <h2 class="section-title">
+                        <span class="title-word">Quantum</span>
+                        <span class="title-word highlight">Intelligence</span>
+                        <span class="title-word">Meets Market</span>
+                        <span class="title-word highlight">Dominance</span>
+                    </h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card floating">
+                        <div class="card-icon">⚡</div>
+                        <h3>Lightning-Fast Execution</h3>
+                        <p>Microsecond trading algorithms capturing market opportunities before traditional systems even detect them.</p>
+                        <div class="card-hover-effect"></div>
+                    </div>
+                    <div class="about-card floating" style="animation-delay: 0.2s">
+                        <div class="card-icon">🛡️</div>
+                        <h3>Fortress-Level Protection</h3>
+                        <p>AI-powered risk shields that adapt in real-time, protecting capital through the most volatile market conditions.</p>
+                        <div class="card-hover-effect"></div>
+                    </div>
+                    <div class="about-card floating" style="animation-delay: 0.4s">
+                        <div class="card-icon">🚀</div>
+                        <h3>Exponential Returns</h3>
+                        <p>Breakthrough strategies unlocking hidden value patterns that traditional analysis simply cannot reach.</p>
+                        <div class="card-hover-effect"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </section>
+
+    <section id="performance" class="section performance">
+        <div class="container">
+            <div class="vision-wrapper">
+                <div class="vision-left">
+                    <div class="section-header">
+                        <div class="section-badge pulse">PERFORMANCE</div>
+                        <h2 class="section-title">
+                            <span class="title-word">Crushing</span>
+                            <span class="title-word highlight">Market</span>
+                            <span class="title-word">Benchmarks</span>
+                        </h2>
+                        <p class="section-subtitle">While others follow trends, we create them</p>
+                    </div>
+                </div>
+                <div class="vision-right">
+                    <div class="vision-stats">
+                        <div class="stat-box">
+                            <div class="stat-value counter" data-target="47">0</div>
+                            <div class="stat-suffix">B+</div>
+                            <div class="stat-label">Assets Under Command</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value counter" data-target="34.2">0</div>
+                            <div class="stat-suffix">%</div>
+                            <div class="stat-label">3-Year CAGR</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value counter" data-target="2.8">0</div>
+                            <div class="stat-suffix">x</div>
+                            <div class="stat-label">Alpha Multiple</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="approach" class="section approach">
+        <div class="container">
+            <div class="tech-header">
+                <div class="section-header">
+                    <div class="section-badge glow">APPROACH</div>
+                    <h2 class="section-title">
+                        <span class="title-word">Beyond</span>
+                        <span class="title-word highlight">Human</span>
+                        <span class="title-word">Limitations</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="tech-showcase">
+                <div class="tech-item" data-tech="quantum">
+                    <div class="tech-icon">
+                        <div class="icon-3d">
+                            <div class="cube">
+                                <div class="face front"></div>
+                                <div class="face back"></div>
+                                <div class="face right"></div>
+                                <div class="face left"></div>
+                                <div class="face top"></div>
+                                <div class="face bottom"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Neural Networks</h3>
+                    <p>Self-evolving intelligence</p>
+                </div>
+                <div class="tech-item" data-tech="ai">
+                    <div class="tech-icon">
+                        <div class="neural-network">
+                            <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="node"></div>
+                        </div>
+                    </div>
+                    <h3>Quantum Computing</h3>
+                    <p>Infinite parallel processing</p>
+                </div>
+                <div class="tech-item" data-tech="blockchain">
+                    <div class="tech-icon">
+                        <div class="blockchain-visual">
+                            <div class="block"></div>
+                            <div class="block"></div>
+                            <div class="block"></div>
+                        </div>
+                    </div>
+                    <h3>Predictive Analytics</h3>
+                    <p>Tomorrow's moves, today</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="insights" class="section insights">
+        <div class="container">
+            <div class="news-header">
+                <div class="section-header">
+                    <div class="section-badge electric">INTELLIGENCE</div>
+                    <h2 class="section-title">
+                        <span class="title-word">Market</span>
+                        <span class="title-word highlight">Prophecies</span>
+                    </h2>
+                    <p class="section-subtitle">Our AI sees what others miss</p>
+                </div>
+            </div>
+            <div class="news-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="date-day">15</span>
+                        <span class="date-month">DEC</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>⚡ AI Market Prediction Engine</h3>
+                        <p>Our quantum algorithms have identified 847% probability of major sector rotation in Q1 2025, positioning our portfolios for maximum capture.</p>
+                        <a href="#" class="timeline-link">Read Report</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="date-day">28</span>
+                        <span class="date-month">NOV</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>🧠 Neural Fed Analysis</h3>
+                        <p>Deep learning models processing 50,000+ economic indicators reveal hidden patterns in central bank behavior, giving us 6-month predictive advantage.</p>
+                        <a href="#" class="timeline-link">Read Report</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">
+                        <span class="date-day">10</span>
+                        <span class="date-month">NOV</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>🚀 Quantum Opportunity Mining</h3>
+                        <p>Breakthrough algorithms discovering alpha in previously invisible market microstructures across 247 global asset classes simultaneously.</p>
+                        <a href="#" class="timeline-link">Read Report</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <h2 class="footer-title">
+                        <span class="title-word">Ready to</span>
+                        <span class="title-word highlight">10x</span>
+                        <span class="title-word">Your Capital?</span>
+                    </h2>
+                    <button class="contact-btn electric-btn">
+                        <span>Join the Elite</span>
+                        <div class="btn-lightning"></div>
+                    </button>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-logo">MERIDIAN CAPITAL</div>
+                    <div class="footer-links">
+                        <a href="#">Disclosures</a>
+                        <a href="#">Terms</a>
+                        <a href="#">Compliance</a>
+                        <a href="#">Investor Relations</a>
+                    </div>
+                    <div class="footer-copyright">
+                        © 2024 Meridian Capital Management LLC. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
