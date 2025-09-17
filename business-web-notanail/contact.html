@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | nöt a nail tokyo</title>
+    <link rel="icon" type="image/png" href="notanialfavicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header scrolled">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="notanaillogo.svg" alt="nöt a nail tokyo" height="50">
+                </a>
+            </div>
+            <nav class="nav">
+                <a href="index.html">ホーム</a>
+                <a href="about.html">私たちについて</a>
+                <a href="access.html">アクセス</a>
+                <a href="contact.html">お問い合わせ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-page">
+        <div class="container">
+            <div class="page-header">
+                <span class="section-label">RESERVATION</span>
+                <h1>ご予約・お問い合わせ</h1>
+                <p class="section-intro">完全予約制となっております。お電話またはメールフォームよりご予約ください。<br>
+                施術中はお電話に出られない場合がございます。予めご了承ください。</p>
+            </div>
+
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <h3>会社情報</h3>
+                    <div class="company-name">株式会社 一舟</div>
+                    <p>代表者：鄭 秋華 (ZHENG QIUHUA)</p>
+                </div>
+
+                <div class="contact-method">
+                    <h3>メールでのお問い合わせ</h3>
+                    <div class="email">準備中</div>
+                    <p>24時間受付、2営業日以内にご返信いたします</p>
+                </div>
+            </div>
+
+            <form class="contact-form" action="https://formspree.io/f/xldwywae" method="POST">
+                <h2>メールフォーム</h2>
+                <div class="form-group">
+                    <label for="name">お名前 *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">メールアドレス *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">お電話番号</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="service">ご希望のサービス</label>
+                    <select id="service" name="service">
+                        <option value="">選択してください</option>
+                        <option value="premium">プレミアムネイル</option>
+                        <option value="care">ネイルケア</option>
+                        <option value="bridal">ブライダルネイル</option>
+                        <option value="other">その他</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">ご希望日時</label>
+                    <input type="text" id="date" name="preferred-date" placeholder="例：12月15日 午後2時頃">
+                </div>
+                <div class="form-group">
+                    <label for="message">メッセージ *</label>
+                    <textarea id="message" name="message" rows="6" required placeholder="ご質問やご要望がございましたらお聞かせください"></textarea>
+                </div>
+                <input type="hidden" name="_subject" value="nöt a nail tokyo - お問い合わせ">
+                <input type="hidden" name="_next" value="thank-you.html">
+                <input type="hidden" name="_language" value="ja">
+                <button type="submit" class="submit-btn">送信する</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <img src="notanaillogo.svg" alt="nöt a nail tokyo" height="40" style="margin-bottom: 20px; opacity: 0.9;">
+                    <h3>nöt a nail tokyo</h3>
+                    <p>〒101-0032 東京都千代田区岩本町2-1-8 SOUSIA神田ビル6H</p>
+                    <p>株式会社 一舟</p>
+                </div>
+                <div class="footer-nav">
+                    <a href="index.html">ホーム</a>
+                    <a href="about.html">私たちについて</a>
+                    <a href="access.html">アクセス</a>
+                    <a href="contact.html">お問い合わせ</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 nöt a nail tokyo Co., Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,214 +1,179 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const headerOffset = 80;
-            const elementPosition = target.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-// Header background on scroll
-window.addEventListener('scroll', function() {
+document.addEventListener('DOMContentLoaded', function() {
+    // Header scroll effect with color inversion
     const header = document.querySelector('.header');
-    if (window.scrollY > 50) {
-        header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
-    } else {
-        header.style.boxShadow = 'none';
-    }
-});
+    let lastScroll = 0;
 
-// Form submission handler
-document.querySelector('.contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    alert(`お問い合わせありがとうございます。\n\nお名前: ${name}\nメール: ${email}\n\n内容を確認次第、ご連絡させていただきます。`);
-    
-    this.reset();
-});
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
 
-// Lazy loading for gallery images
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-};
-
-const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const img = entry.target;
-            img.style.opacity = '0';
-            img.style.transition = 'opacity 0.5s ease';
-            
-            setTimeout(() => {
-                img.style.opacity = '1';
-            }, 100);
-            
-            observer.unobserve(img);
+        if (currentScroll > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
         }
+
+        // Hide/show header on scroll
+        if (currentScroll > lastScroll && currentScroll > 500) {
+            header.style.transform = 'translateY(-100%)';
+        } else {
+            header.style.transform = 'translateY(0)';
+        }
+
+        lastScroll = currentScroll;
     });
-}, observerOptions);
 
-document.querySelectorAll('.gallery-item img').forEach(img => {
-    imageObserver.observe(img);
-});
+    // Smooth scrolling with offset
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const headerOffset = 90;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-// Mobile menu toggle (for future implementation)
-function createMobileMenu() {
-    const header = document.querySelector('.header .container');
-    const nav = document.querySelector('.nav');
-    
-    const menuButton = document.createElement('button');
-    menuButton.className = 'mobile-menu-toggle';
-    menuButton.innerHTML = `
-        <span></span>
-        <span></span>
-        <span></span>
-    `;
-    
-    menuButton.style.cssText = `
-        display: none;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 10px;
-        position: relative;
-    `;
-    
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Create mobile menu
+    const createMobileMenu = () => {
+        const container = document.querySelector('.header .container');
+        const nav = document.querySelector('.nav');
+
+        const menuButton = document.createElement('button');
+        menuButton.className = 'mobile-menu-toggle';
+        menuButton.innerHTML = `
+            <span></span>
+            <span></span>
+            <span></span>
+        `;
+
+        container.appendChild(menuButton);
+
+        menuButton.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            menuButton.classList.toggle('active');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                menuButton.classList.remove('active');
+            });
+        });
+    };
+
+    createMobileMenu();
+
+    // Simple parallax - removed heavy animations
+
+    // Removed magnetic cursor effect for better performance
+
+    // Form submission
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            alert(`お問い合わせありがとうございます。\n\nお名前: ${name}\nメール: ${email}\n\n内容を確認次第、ご連絡させていただきます。`);
+
+            this.reset();
+        });
+    }
+
+    // Advanced reveal animations with stagger
+    const observerOptions = {
+        threshold: 0.05,
+        rootMargin: '0px 0px -80px 0px'
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('revealed');
+                }, index * 50);
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Simplified CSS for reveal animation
     const style = document.createElement('style');
     style.textContent = `
-        @media (max-width: 768px) {
-            .mobile-menu-toggle {
-                display: block !important;
-            }
-            .mobile-menu-toggle span {
-                display: block;
-                width: 25px;
-                height: 2px;
-                background: #4a4a4a;
-                margin: 5px 0;
-                transition: 0.3s;
-            }
-            .nav {
-                display: none;
-                position: absolute;
-                top: 80px;
-                left: 0;
-                right: 0;
-                background: white;
-                flex-direction: column;
-                padding: 20px;
-                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            }
-            .nav.active {
-                display: flex !important;
-            }
+        .service-card, .gallery-item, .info-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .service-card.revealed, .gallery-item.revealed, .info-item.revealed {
+            opacity: 1;
+            transform: translateY(0);
         }
     `;
     document.head.appendChild(style);
-    
-    header.appendChild(menuButton);
-    
-    menuButton.addEventListener('click', () => {
-        nav.classList.toggle('active');
+
+    // Observe elements
+    const elementsToReveal = document.querySelectorAll('.service-card, .gallery-item, .info-item');
+    elementsToReveal.forEach(element => {
+        revealObserver.observe(element);
     });
-}
 
-// Initialize mobile menu
-createMobileMenu();
+    // Simplified gallery hover effect
+    const galleryItems = document.querySelectorAll('.gallery-item');
 
-// Parallax effect for hero images
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const heroImages = document.querySelectorAll('.hero-img-container');
-    const heroCircle = document.querySelector('.hero-circle');
-    const heroJapaneseBg = document.querySelector('.hero-japanese-bg');
-    
-    if (scrolled < 600) {
-        heroImages.forEach((img, index) => {
-            const speed = 0.5 + (index * 0.1);
-            img.style.transform = `translateY(${scrolled * speed}px)`;
+    galleryItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            item.style.transform = 'scale(1.02)';
+            item.style.zIndex = '10';
         });
-        
-        if (heroCircle) {
-            heroCircle.style.transform = `translate(-50%, -50%) rotate(${scrolled * 0.5}deg) scale(${1 + scrolled * 0.0005})`;
-        }
-        
-        if (heroJapaneseBg) {
-            heroJapaneseBg.style.transform = `translateY(${scrolled * 0.3}px)`;
-            heroJapaneseBg.style.opacity = Math.max(0.05 - scrolled * 0.0001, 0);
-        }
-    }
-});
 
-// Animate hero images on load
-window.addEventListener('load', () => {
-    const heroImages = document.querySelectorAll('.hero-img-container');
-    heroImages.forEach((img, index) => {
-        setTimeout(() => {
-            img.style.opacity = '0';
-            img.style.transform = 'scale(0.8) translateY(30px)';
-            img.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-            
+        item.addEventListener('mouseleave', () => {
+            item.style.transform = 'scale(1)';
+            item.style.zIndex = '1';
+        });
+    });
+
+    // Removed custom cursor for better performance
+
+    // Hero content animation on load
+    window.addEventListener('load', () => {
+        const heroContent = document.querySelector('.hero-content');
+        const heroImagesAnim = document.querySelectorAll('.hero-img-container');
+
+        if (heroContent) {
+            heroContent.style.opacity = '0';
+            heroContent.style.transform = 'translateY(40px)';
+
             setTimeout(() => {
+                heroContent.style.transition = 'all 1.2s cubic-bezier(0.4, 0, 0.2, 1)';
+                heroContent.style.opacity = '1';
+                heroContent.style.transform = 'translateY(0)';
+            }, 200);
+        }
+
+        heroImagesAnim.forEach((img, index) => {
+            img.style.opacity = '0';
+            img.style.transform += ' scale(0.8)';
+
+            setTimeout(() => {
+                img.style.transition = 'all 1s cubic-bezier(0.4, 0, 0.2, 1)';
                 img.style.opacity = '1';
-                img.style.transform = 'scale(1) translateY(0)';
-            }, 100);
-        }, index * 150);
-    });
-    
-    // Animate text elements
-    const heroContent = document.querySelector('.hero-content');
-    if (heroContent) {
-        heroContent.style.opacity = '0';
-        heroContent.style.transform = 'translateX(-30px)';
-        heroContent.style.transition = 'all 1s cubic-bezier(0.4, 0, 0.2, 1)';
-        
-        setTimeout(() => {
-            heroContent.style.opacity = '1';
-            heroContent.style.transform = 'translateX(0)';
-        }, 300);
-    }
-});
-
-// Animate elements on scroll
-const animateOnScroll = () => {
-    const elements = document.querySelectorAll('.service-card, .gallery-item, .info-item');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '0';
-                entry.target.style.transform = 'translateY(20px)';
-                entry.target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                
-                setTimeout(() => {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }, 100);
-                
-                observer.unobserve(entry.target);
-            }
+                img.style.transform = img.style.transform.replace('scale(0.8)', 'scale(1)');
+            }, 400 + (index * 150));
         });
-    }, { threshold: 0.1 });
-    
-    elements.forEach(element => {
-        observer.observe(element);
     });
-};
 
-// Initialize animations
-document.addEventListener('DOMContentLoaded', animateOnScroll);
+    // Removed section transitions for better performance
+});
