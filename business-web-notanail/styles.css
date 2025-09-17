@@ -1152,16 +1152,14 @@ body {
     
     .hero {
         margin-top: 60px;
-        padding: 0;
-        background: linear-gradient(180deg, #f8fffe 0%, #ffffff 100%);
-        min-height: 80vh;
-        display: flex;
-        align-items: center;
+        padding: 10px 0;
+        background: white;
+        min-height: auto;
     }
 
     .hero-wrapper {
         width: 100%;
-        padding: 40px 20px;
+        padding: 10px 15px;
     }
 
     .hero-left {
@@ -1170,24 +1168,29 @@ body {
     }
 
     .hero-right {
-        margin-top: 40px;
+        margin-top: 15px;
     }
 
     .hero-images {
         display: flex;
         gap: 15px;
         overflow-x: auto;
-        padding: 20px 0;
+        padding: 10px 5px;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+    }
+
+    .hero-images::-webkit-scrollbar {
+        display: none;
     }
 
     .hero-img-container {
-        flex: 0 0 250px;
-        height: 180px;
-        border-radius: 20px;
+        flex: 0 0 220px;
+        height: 160px;
+        border-radius: 16px;
         overflow: hidden;
-        box-shadow: 0 8px 25px rgba(131, 204, 201, 0.15);
+        box-shadow: 0 6px 20px rgba(131, 204, 201, 0.2);
         scroll-snap-align: center;
     }
 
@@ -1199,47 +1202,47 @@ body {
 
     .hero-subtitle {
         display: inline-block;
-        font-size: 12px;
-        padding: 8px 16px;
-        margin-bottom: 20px;
+        font-size: 11px;
+        padding: 6px 12px;
+        margin-bottom: 12px;
         background: var(--primary-color);
         color: white;
         font-weight: 600;
-        border-radius: 25px;
-        letter-spacing: 0.8px;
+        border-radius: 20px;
+        letter-spacing: 0.5px;
         text-transform: uppercase;
     }
 
     .hero-content {
         text-align: center;
         padding: 0;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
 
     .hero-content h1 {
-        font-size: 36px;
-        margin-bottom: 25px;
-        line-height: 1.2;
+        font-size: 26px;
+        margin-bottom: 12px;
+        line-height: 1.3;
         color: var(--text-dark);
-        font-weight: 800;
-        letter-spacing: -1px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
     }
 
     .hero-content h1 .accent {
-        font-size: 32px;
+        font-size: 23px;
         color: var(--primary-color);
-        font-weight: 900;
+        font-weight: 800;
         display: block;
-        margin-top: 12px;
+        margin-top: 6px;
     }
 
     .hero-japanese {
-        font-size: 17px;
-        line-height: 1.7;
-        margin-bottom: 35px;
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 15px;
         color: var(--text-gray);
         font-weight: 400;
-        max-width: 320px;
+        max-width: 280px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -1247,7 +1250,7 @@ body {
     .hero-buttons {
         display: flex;
         justify-content: center;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .hero-btn-outline {
@@ -1272,16 +1275,16 @@ body {
     }
 
     .hero-decoration {
-        margin-top: 20px;
+        margin-top: 10px;
         text-align: center;
     }
 
     .hero-decoration-text {
-        font-size: 12px;
+        font-size: 10px;
         color: var(--primary-color);
-        opacity: 0.9;
-        font-weight: 600;
-        letter-spacing: 2px;
+        opacity: 0.8;
+        font-weight: 500;
+        letter-spacing: 1px;
         text-transform: uppercase;
     }
 
@@ -1594,6 +1597,153 @@ body {
         background: var(--primary-color);
         color: white;
         transform: translateY(-2px);
+    }
+
+    /* Privacy Policy Page Styles */
+    .privacy-policy-page {
+        padding: 120px 0 80px;
+        background: linear-gradient(135deg, var(--bg-light) 0%, white 100%);
+    }
+
+    .privacy-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+    }
+
+    .privacy-section {
+        margin-bottom: 0;
+        padding: 35px 40px;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .privacy-section:last-child {
+        border-bottom: none;
+    }
+
+    .privacy-section:nth-child(even) {
+        background: rgba(131, 204, 201, 0.02);
+    }
+
+    .privacy-section h2 {
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 20px;
+        padding-left: 15px;
+        position: relative;
+    }
+
+    .privacy-section h2:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 2px;
+        width: 4px;
+        height: 24px;
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        border-radius: 2px;
+    }
+
+    .privacy-section p {
+        font-size: 15px;
+        line-height: 1.9;
+        color: var(--text-gray);
+        margin-bottom: 18px;
+    }
+
+    .privacy-section ul {
+        margin: 20px 0;
+        padding-left: 0;
+        list-style: none;
+    }
+
+    .privacy-section li {
+        font-size: 15px;
+        line-height: 1.8;
+        color: var(--text-gray);
+        margin-bottom: 12px;
+        padding-left: 25px;
+        position: relative;
+    }
+
+    .privacy-section li:before {
+        content: '•';
+        position: absolute;
+        left: 8px;
+        color: var(--primary-color);
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .contact-details {
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+        color: white;
+        padding: 30px;
+        border-radius: 15px;
+        margin-top: 20px;
+        box-shadow: 0 8px 25px rgba(131, 204, 201, 0.3);
+    }
+
+    .contact-details p {
+        margin-bottom: 12px;
+        font-weight: 500;
+        color: white;
+    }
+
+    .contact-details strong {
+        color: white;
+        font-weight: 700;
+    }
+
+    .effective-date {
+        text-align: center;
+        font-size: 13px;
+        color: var(--light-gray);
+        font-style: italic;
+        background: var(--accent-neutral);
+        padding: 25px;
+        margin: 0;
+        border-top: 3px solid var(--primary-color);
+    }
+
+    /* Mobile Privacy Policy */
+    @media (max-width: 768px) {
+        .privacy-policy-page {
+            padding: 80px 0 60px;
+        }
+
+        .privacy-content {
+            margin: 0 15px;
+            border-radius: 15px;
+        }
+
+        .privacy-section {
+            padding: 25px 20px;
+        }
+
+        .privacy-section h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .privacy-section p,
+        .privacy-section li {
+            font-size: 14px;
+        }
+
+        .contact-details {
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .effective-date {
+            padding: 20px;
+            font-size: 12px;
+        }
     }
 
     .copyright {
